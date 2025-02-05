@@ -1,0 +1,17 @@
+{
+  "name": "grafana-panel-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "plugin",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "start:plugin": "npm run server --workspace=plugin & npm run dev --workspace=plugin",
+    "start:backend": "npm run start --workspace=backend",
+    "start:all": "npm run server --workspace=plugin & npm run dev --workspace=plugin & npm run start --workspace=backend"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

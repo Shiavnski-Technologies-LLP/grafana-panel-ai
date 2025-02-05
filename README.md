@@ -16,34 +16,29 @@ cd grafana-panel-ai
 ```
 
 ### 2️⃣ Install Dependencies
-Jump into both the `plugin` and `backend` directories and install the necessary packages:
-
+Run the following command in the root folder to install all dependencies at once:
 ```sh
-cd plugin
-npm install
-cd ../backend
-npm install
+npm run install:all
 ```
 
 ## 🚀 Running the Application
 
-### 1️⃣ Start the Grafana Server
-Head over to the `plugin` directory and fire up the server:
+### 1️⃣ Start the Plugin (Grafana Server + Plugin Dev Mode)
+Run the following command in the root folder to start both the Grafana server and the plugin:
 ```sh
-npm run server
+npm run start:plugin
 ```
 
-### 2️⃣ Start the Plugin
-Inside the `plugin` directory, launch the development mode:
+### 2️⃣ Start the Backend Server
+Run the following command in the root folder to start the backend server:
 ```sh
-npm run dev
+npm run start:backend
 ```
 
-### 3️⃣ Start the Backend Server
-Finally, start the backend by running:
+### 3️⃣ Start Everything Together (Grafana Server + Plugin + Backend)
+To start everything at once, run:
 ```sh
-cd backend
-npm run start
+npm run start:all
 ```
 
 ## 🌐 Accessing Grafana
@@ -52,15 +47,6 @@ Once all services are up and running, open Grafana in your favorite browser:
 http://localhost:3000
 ```
 Log in and configure your plugin as per your requirements. 🎨
-
-## 🛠 Troubleshooting Tips
-- Make sure both the backend and plugin servers are running smoothly.
-- Need insights? Check the logs:
-  ```sh
-  npm run server --verbose  # Grafana server logs
-  npm run dev --verbose     # Plugin logs
-  npm run start --verbose   # Backend logs
-  ```
 
 ## 🤝 Contributing
 Want to make this plugin even better? Feel free to open issues or submit pull requests. We’d love your help! 💡
